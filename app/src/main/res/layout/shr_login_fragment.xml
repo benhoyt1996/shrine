@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             app:boxStrokeColor="#d50000"
+            app:hintTextColor="#d50000"
             android:hint="@string/shr_hint_username">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -54,6 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             app:boxStrokeColor="#d50000"
+            app:hintTextColor="#d50000"
             android:hint="@string/shr_hint_password">
 
             <com.google.android.material.textfield.TextInputEditText
