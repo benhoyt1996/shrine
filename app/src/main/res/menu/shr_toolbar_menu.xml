@@ -8,7 +8,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/filter"
-        android:icon="@drawable/shr_filter"
+        android:icon="@drawable/ic_filter_list_white_24dp"
         android:title="@string/shr_filter_title"
         app:showAsAction="always" />
 </menu>
