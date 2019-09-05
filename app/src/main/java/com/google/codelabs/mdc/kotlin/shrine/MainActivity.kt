@@ -2,12 +2,15 @@ package com.google.codelabs.mdc.kotlin.shrine
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity(), NavigationHost {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         setContentView(R.layout.shr_main_activity)
 
         if (savedInstanceState == null) {

@@ -4,15 +4,13 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.shr_login_fragment.*
 import kotlinx.android.synthetic.main.shr_login_fragment.view.*
-import java.lang.NullPointerException
+
 
 /**
  * Fragment representing the login screen for Shrine.
@@ -25,6 +23,15 @@ class LoginFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.shr_login_fragment, container, false)
 
+        setupListners(view)
+
+        // Snippet from "Navigate to the next Fragment" section goes here.
+
+        return view
+    }
+
+    private fun setupListners(view: View) {
+
         view.next_button.setOnClickListener{
             if (!isPasswordValid(password_edit_text.text!!)) {
                 password_text_input.error = getString(R.string.shr_error_password)
@@ -34,9 +41,6 @@ class LoginFragment : Fragment() {
                 (activity as NavigationHost).navigateTo(ProductGridFragment(), false)
             }
         }
-
-        // Snippet from "Navigate to the next Fragment" section goes here.
-
 
         view.password_edit_text.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -56,11 +60,7 @@ class LoginFragment : Fragment() {
 
         })
 
-        return view
     }
-
-
-
 
 
 }
